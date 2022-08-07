@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Iph",
+      "price": 4300,
+      "quantity": 500,
+      "selected": false,
+      "available": true
+    },
+    {
+      "id": 3,
+      "name": "smartphone",
+      "price": 1200,
+      "quantity": "1000",
+      "selected": true,
+      "available": true
+    },
+    {
+      "id": 4,
+      "name": "mouse",
+      "price": 300,
+      "quantity": 500,
+      "selected": false,
+      "available": true
+    }
+  ]
+}
