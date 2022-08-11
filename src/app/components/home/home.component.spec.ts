@@ -20,4 +20,14 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  //exact equality
+  it('two plus two is four', () => {
+    expect(2+2).toBe(4);
+  });
+
+  //Object Value
+  it('Object Value', () => {
+    const data={name:"testing"};
+    expect(data).toEqual({name:"testing"});
+  });
 });

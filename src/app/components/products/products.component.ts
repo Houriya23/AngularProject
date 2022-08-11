@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductsService } from 'src/app/services/products.service';
+import {ProductsService} from 'src/app/services/products.service';
 import { Product } from 'src/app/model/product.model';
 import { Observable} from 'rxjs';
 import {catchError,map,startWith} from 'rxjs/operators';
 import {of} from 'rxjs';
 import { AppDataState, DataStateEnum } from 'src/app/state/product.state';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -38,7 +39,7 @@ readonly DataStateEnum=DataStateEnum;
       map(data=>{
         console.log(data);
         return ({dataState:DataStateEnum.LOADED,data:data})}),
-      startWith({dataState:DataStateEnum.LOADING }),
+     startWith({dataState:DataStateEnum.LOADING }),
       catchError(err=>of({dataState:DataStateEnum.ERROR,errorMessage:err.message}))
     );
   }
@@ -48,7 +49,7 @@ readonly DataStateEnum=DataStateEnum;
       map(data=>{
         console.log(data);
         return ({dataState:DataStateEnum.LOADED,data:data})}),
-      startWith({dataState:DataStateEnum.LOADING }),
+        startWith({dataState:DataStateEnum.LOADING }),
       catchError(err=>of({dataState:DataStateEnum.ERROR,errorMessage:err.message}))
     );
     
@@ -59,7 +60,7 @@ readonly DataStateEnum=DataStateEnum;
       map(data=>{
         console.log(data);
         return ({dataState:DataStateEnum.LOADED,data:data})}),
-      startWith({dataState:DataStateEnum.LOADING }),
+      //startWith({dataState:DataStateEnum.LOADING }),
       catchError(err=>of({dataState:DataStateEnum.ERROR,errorMessage:err.message}))
     );
   }

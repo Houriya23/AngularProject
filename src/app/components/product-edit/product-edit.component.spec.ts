@@ -1,9 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ProductsService } from 'src/app/services/products.service';
 import { ProductEditComponent } from './product-edit.component';
 
 describe('ProductEditComponent', () => {
   let component: ProductEditComponent;
+ 
   let fixture: ComponentFixture<ProductEditComponent>;
 
   beforeEach(async () => {
