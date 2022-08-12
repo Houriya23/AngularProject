@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -13,7 +13,7 @@ import { ProductEditComponent } from './components/product-edit/product-edit.com
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent,
+    NavBarComponent ,
     ProductsComponent,
     HomeComponent,
     ProductAddComponent,
@@ -26,6 +26,9 @@ import { ProductEditComponent } from './components/product-edit/product-edit.com
     FormsModule,
     ReactiveFormsModule
 
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ],
   providers: [],
   bootstrap: [AppComponent]

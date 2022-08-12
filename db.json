@@ -1,14 +1,6 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Iph",
-      "price": 4300,
-      "quantity": 500,
-      "selected": false,
-      "available": true
-    },
-    {
       "id": 3,
       "name": "smartphone",
       "price": 1200,
@@ -23,6 +15,14 @@
       "quantity": 500,
       "selected": false,
       "available": true
+    },
+    {
+      "name": "TEST",
+      "price": "11111",
+      "quantity": "1",
+      "selected": true,
+      "available": true,
+      "id": 5
     }
   ]
 }
