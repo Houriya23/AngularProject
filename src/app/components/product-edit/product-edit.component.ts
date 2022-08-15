@@ -24,7 +24,7 @@ export class ProductEditComponent implements OnInit {
 this.productsService.getProduct(this.productId).subscribe(product=>{
 this.productFormGroup=this.fb.group({
   id:[product.id,Validators.required],
- name:[product.name,Validators.required],
+ name: [product.name, [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
   price:[product.price,Validators.required],
   quantity:[product.quantity,Validators.required],
   selected:[product.selected,Validators.required],
@@ -35,7 +35,7 @@ this.productFormGroup=this.fb.group({
 }
 
 onUpdateProduct(){
-  if(this.productFormGroup.valid){
+  if(this.productFormGroup?.valid){
     this.productsService.updateProducts(this.productFormGroup.value).subscribe(data=>{
     alert("Successful update!");
     });

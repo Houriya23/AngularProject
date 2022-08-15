@@ -3,7 +3,9 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Product } from 'src/app/model/product.model';
 import {Observable} from 'node_modules/rxjs/dist/types/internal/Observable';
+import { ProductEditComponent } from '../components/product-edit/product-edit.component';
 //import { json } from 'node:stream/consumers';
+
 
 let host=environment.host;
 @Injectable({providedIn:"root"})

@@ -1,6 +1,6 @@
+import { ProductAddComponent } from 'src/app/components/product-add/product-add.component';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ProductsService } from 'src/app/services/products.service';
-import { ProductAddComponent } from './product-add.component';
 import { ReactiveFormsModule, FormsModule, FormBuilder } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { compileFunction } from 'node:vm';
@@ -173,13 +173,46 @@ describe('ProductAddComponent', () => {
     component.productFormGroup.controls['available'].setValue(true);
     expect(component.productFormGroup.valid).toBeTruthy();
 
-  
+
 
   });
-  it('onSaveProduct() should return null',()=>{
+  it('onSaveProduct() should return null', () => {
     expect(component.onSaveProduct()).toBeNull;
 
   });
 
 
+
+
+
+  it('should save the form when we click on save', () => {
+    component.productFormGroup.controls['name'].setValue("ameni");
+    component.productFormGroup.controls['price'].setValue(11);
+    component.productFormGroup.controls['quantity'].setValue(1);
+    component.productFormGroup.controls['selected'].setValue(false);
+    component.productFormGroup.controls['available'].setValue(true);
+    component.onSaveProduct();
+
+    expect(component.productFormGroup).not.toBeNull;
+
+
+  }
+  );
+  //it("should call alert", () => {
+  //window.alert = jest.fn();
+  //component.productFormGroup.controls['name'].setValue("ameni");
+  //component.productFormGroup.controls['price'].setValue(11);
+  // component.productFormGroup.controls['quantity'].setValue(1);
+  // component.productFormGroup.controls['selected'].setValue(false);
+  // component.productFormGroup.controls['available'].setValue(true);
+  // jest.fn();
+  // expect(window.alert).toEqual('success, the product is saved!!');
+  //});  
+
+
+
+
+
+
 })
+
